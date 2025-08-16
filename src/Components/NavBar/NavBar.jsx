@@ -101,7 +101,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="shadow-sm z-40 shadow-orange-300 sticky top-0 ">
+    <div className="shadow-sm z-40 shadow-orange-300 sticky top-0 bg-amber-200">
       <Container>
         <div className="navbar">
           <div className="navbar-start">
