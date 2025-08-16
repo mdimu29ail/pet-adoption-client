@@ -1,314 +1,430 @@
 export const blogPosts = [
   {
     id: 1,
-    title: '10 Tips for Adopting a Dog',
+    title: 'Tips for Adopting a Dog',
     date: '2025-08-16',
+    author: 'Sarah Khan',
+    reading_time: '5 min read',
     excerpt:
-      'Adopting a dog is a big responsibility. Here are 10 tips to help you choose and care for your new furry friend.',
-    image_url:
-      'https://i.ibb.co/8DM3PMKf/Whats-App-Image-2025-07-14-at-20-27-57-12d01b1d.jpg',
+      'Learn essential tips for adopting a dog and providing a happy home.',
+    content:
+      'This post covers selecting the right breed, preparing your home, training, nutrition, and bonding with your new dog.',
+    image_url: 'https://i.ibb.co/8DM3PMKf/dog.jpg',
     link: '/blog/1',
     category: 'Dog',
+    tags: ['Dog', 'Adoption', 'Care', 'Training'],
   },
   {
     id: 2,
     title: 'How to Care for Your Cat',
     date: '2025-08-14',
-    excerpt:
-      'Cats are independent yet loving pets. Learn essential care tips for a happy and healthy cat.',
-    image_url:
-      'https://i.ibb.co/jkjt18ns/Whats-App-Image-2025-07-14-at-20-27-31-74e93d22.jpg',
+    author: 'Rafi Ahmed',
+    reading_time: '4 min read',
+    excerpt: 'Cats are independent yet loving pets. Learn essential care tips.',
+    content:
+      'This post explains how to maintain your cat’s health, grooming routines, feeding schedules, and mental stimulation.',
+    image_url: 'https://i.ibb.co/jkjt18ns/cat.jpg',
     link: '/blog/2',
     category: 'Cat',
+    tags: ['Cat', 'Care', 'Health', 'Nutrition'],
   },
   {
     id: 3,
     title: 'Top 5 Exotic Pets for Beginners',
     date: '2025-08-12',
-    excerpt:
-      'Thinking of owning an exotic pet? Discover the best beginner-friendly pets and how to care for them.',
-    image_url:
-      'https://i.ibb.co/zhMbvXRM/Whats-App-Image-2025-07-14-at-20-27-56-9bd37a21.jpg',
+    author: 'Tanvir Alam',
+    reading_time: '6 min read',
+    excerpt: 'Discover beginner-friendly exotic pets and how to care for them.',
+    content:
+      'From small reptiles to exotic birds, learn which pets are suitable for first-time owners, including habitat, diet, and handling tips.',
+    image_url: 'https://i.ibb.co/zhMbvXRM/others.jpg',
     link: '/blog/3',
     category: 'Others',
+    tags: ['Exotic Pets', 'Beginner', 'Pet Care'],
   },
   {
     id: 4,
     title: 'Training Tips for Puppies',
     date: '2025-08-11',
+    author: 'Nadia Hossain',
+    reading_time: '5 min read',
     excerpt:
-      'Make your puppy well-behaved and happy with these simple training strategies.',
-    image_url:
-      'https://i.ibb.co/tMf5Yknh/Whats-App-Image-2025-07-14-at-20-27-58-5daff0b2.jpg',
+      'Make your puppy well-behaved and happy with these training strategies.',
+    content:
+      'Learn effective techniques for potty training, obedience commands, socialization, and preventing behavioral issues in puppies.',
+    image_url: 'https://i.ibb.co/8DM3PMKf/dog.jpg',
     link: '/blog/4',
     category: 'Dog',
+    tags: ['Dog', 'Training', 'Puppy', 'Behavior'],
   },
   {
     id: 5,
     title: 'Nutrition for Cats',
     date: '2025-08-10',
+    author: 'Imamul Molla',
+    reading_time: '4 min read',
     excerpt:
       'Learn about the best diets for your feline friend to keep them healthy and energetic.',
-    image_url:
-      'https://i.ibb.co/NnsS4hCG/Whats-App-Image-2025-07-14-at-20-27-34-5c929eae.jpg',
+    content:
+      'Discover the types of cat food, portion sizes, essential nutrients, and tips for picky eaters to ensure your cat receives a balanced diet.',
+    image_url: 'https://i.ibb.co/jkjt18ns/cat.jpg',
     link: '/blog/5',
     category: 'Cat',
+    tags: ['Cat', 'Nutrition', 'Diet', 'Health'],
   },
   {
     id: 6,
     title: 'Caring for Rabbits Indoors',
     date: '2025-08-09',
-    excerpt:
-      'Keep your pet rabbit happy, healthy, and safe in an indoor environment.',
-    image_url:
-      'https://i.ibb.co/tPxLtBYd/Whats-App-Image-2025-07-14-at-20-27-59-28d3ee4d.jpg',
+    author: 'Sarah Khan',
+    reading_time: '5 min read',
+    excerpt: 'Keep your pet rabbit happy, healthy, and safe indoors.',
+    content:
+      'This post covers housing, diet, enrichment, and health care tips to ensure your rabbit thrives indoors.',
+    image_url: 'https://i.ibb.co/tPxLtBYd/rabbit.jpg',
     link: '/blog/6',
     category: 'Rabbit',
+    tags: ['Rabbit', 'Care', 'Health', 'Indoor'],
   },
   {
     id: 7,
     title: 'Top Aquarium Fish for Beginners',
     date: '2025-08-08',
+    author: 'Rafi Ahmed',
+    reading_time: '4 min read',
     excerpt: 'Start your aquarium with these easy-to-care-for fish species.',
-    image_url:
-      'https://i.ibb.co/60C54Bbd/Whats-App-Image-2025-07-14-at-20-27-35-19135d8b.jpg',
+    content:
+      'Learn about the best beginner-friendly fish, tank setup, water maintenance, and feeding tips.',
+    image_url: 'https://i.ibb.co/60C54Bbd/fish.jpg',
     link: '/blog/7',
     category: 'Fish',
+    tags: ['Fish', 'Aquarium', 'Beginner', 'Care'],
   },
   {
     id: 8,
     title: 'Bird Care Tips',
     date: '2025-08-07',
+    author: 'Tanvir Alam',
+    reading_time: '4 min read',
     excerpt: 'Learn how to keep your pet birds happy and healthy at home.',
-    image_url:
-      'https://i.ibb.co/VWN0bnc2/Whats-App-Image-2025-07-14-at-20-25-41-266a384e.jpg',
+    content:
+      'Covers diet, cage setup, enrichment, socialization, and health care for common pet birds.',
+    image_url: 'https://i.ibb.co/VWN0bnc2/bird.jpg',
     link: '/blog/8',
     category: 'Bird',
+    tags: ['Bird', 'Care', 'Health', 'Cage'],
   },
   {
     id: 9,
     title: 'Adopting Senior Pets',
     date: '2025-08-06',
-    excerpt:
-      'Give older pets a loving home. Learn how to care for senior animals.',
-    image_url:
-      'https://i.ibb.co/4RRr2403/Whats-App-Image-2025-07-14-at-20-27-35-1a95cac1.jpg',
+    author: 'Nadia Hossain',
+    reading_time: '5 min read',
+    excerpt: 'Give older pets a loving home and learn how to care for them.',
+    content:
+      'This post discusses health checks, diet, comfort, and emotional care for senior pets.',
+    image_url: 'https://i.ibb.co/zhMbvXRM/others.jpg',
     link: '/blog/9',
     category: 'Others',
+    tags: ['Senior Pets', 'Adoption', 'Care', 'Health'],
   },
   {
     id: 10,
     title: 'Best Toys for Dogs',
     date: '2025-08-05',
+    author: 'Imamul Molla',
+    reading_time: '4 min read',
     excerpt:
       'Keep your dog entertained and active with these recommended toys.',
-    image_url:
-      'https://i.ibb.co/5xYzf7Fk/Whats-App-Image-2025-07-14-at-20-27-58-ef0f5406.jpg',
+    content:
+      'Learn about different types of dog toys, benefits for mental stimulation, and tips for safe play.',
+    image_url: 'https://i.ibb.co/8DM3PMKf/dog.jpg',
     link: '/blog/10',
     category: 'Dog',
+    tags: ['Dog', 'Toys', 'Play', 'Exercise'],
   },
   {
     id: 11,
     title: 'Grooming Your Cat',
     date: '2025-08-04',
+    author: 'Sarah Khan',
+    reading_time: '4 min read',
     excerpt: 'Essential grooming tips for a healthy and happy cat.',
-    image_url:
-      'https://i.ibb.co/jkjt18ns/Whats-App-Image-2025-07-14-at-20-27-31-74e93d22.jpg',
+    content:
+      'Covers brushing techniques, nail trimming, dental care, and maintaining a clean coat.',
+    image_url: 'https://i.ibb.co/jkjt18ns/cat.jpg',
     link: '/blog/11',
     category: 'Cat',
+    tags: ['Cat', 'Grooming', 'Health', 'Care'],
   },
   {
     id: 12,
     title: 'Rabbit Diet and Nutrition',
     date: '2025-08-03',
+    author: 'Rafi Ahmed',
+    reading_time: '5 min read',
     excerpt:
       'Ensure your rabbit gets the right nutrition for a long and healthy life.',
-    image_url:
-      'https://i.ibb.co/tPxLtBYd/Whats-App-Image-2025-07-14-at-20-27-59-28d3ee4d.jpg',
+    content:
+      'This post explains recommended foods, portion sizes, supplements, and hydration for rabbits.',
+    image_url: 'https://i.ibb.co/tPxLtBYd/rabbit.jpg',
     link: '/blog/12',
     category: 'Rabbit',
+    tags: ['Rabbit', 'Nutrition', 'Diet', 'Health'],
   },
   {
     id: 13,
     title: 'Setting Up a Fish Tank',
     date: '2025-08-02',
+    author: 'Tanvir Alam',
+    reading_time: '5 min read',
     excerpt: 'Step-by-step guide to creating a thriving fish tank at home.',
-    image_url:
-      'https://i.ibb.co/60C54Bbd/Whats-App-Image-2025-07-14-at-20-27-35-19135d8b.jpg',
+    content:
+      'Learn tank selection, filtration, water quality, choosing fish, and maintaining a healthy aquarium.',
+    image_url: 'https://i.ibb.co/60C54Bbd/fish.jpg',
     link: '/blog/13',
     category: 'Fish',
+    tags: ['Fish', 'Aquarium', 'Setup', 'Care'],
   },
   {
     id: 14,
     title: 'Training Your Parrot',
     date: '2025-08-01',
+    author: 'Nadia Hossain',
+    reading_time: '5 min read',
     excerpt: 'Teach your parrot to talk, do tricks, and stay healthy.',
-    image_url:
-      'https://i.ibb.co/VWN0bnc2/Whats-App-Image-2025-07-14-at-20-25-41-266a384e.jpg',
+    content:
+      'Covers behavior training, mental stimulation, diet, and bonding with your parrot.',
+    image_url: 'https://i.ibb.co/VWN0bnc2/bird.jpg',
     link: '/blog/14',
     category: 'Bird',
+    tags: ['Bird', 'Parrot', 'Training', 'Care'],
   },
   {
     id: 15,
     title: 'Traveling with Dogs',
     date: '2025-07-31',
+    author: 'Imamul Molla',
+    reading_time: '4 min read',
     excerpt: 'Tips for safe and comfortable travel with your dog.',
-    image_url:
-      'https://i.ibb.co/8DM3PMKf/Whats-App-Image-2025-07-14-at-20-27-57-12d01b1d.jpg',
+    content:
+      'Learn travel safety, preparation, packing essentials, and tips to keep your dog calm and happy.',
+    image_url: 'https://i.ibb.co/8DM3PMKf/dog.jpg',
     link: '/blog/15',
     category: 'Dog',
+    tags: ['Dog', 'Travel', 'Tips', 'Safety'],
   },
   {
     id: 16,
     title: 'Indoor Activities for Cats',
     date: '2025-07-30',
+    author: 'Sarah Khan',
+    reading_time: '4 min read',
     excerpt:
       'Keep your cat active and engaged indoors with these fun activities.',
-    image_url:
-      'https://i.ibb.co/jkjt18ns/Whats-App-Image-2025-07-14-at-20-27-31-74e93d22.jpg',
+    content:
+      'Covers games, toys, puzzle feeders, and DIY activities to prevent boredom and promote exercise.',
+    image_url: 'https://i.ibb.co/jkjt18ns/cat.jpg',
     link: '/blog/16',
     category: 'Cat',
+    tags: ['Cat', 'Indoor', 'Activities', 'Play'],
   },
   {
     id: 17,
     title: 'Rabbit Habitat Ideas',
     date: '2025-07-29',
+    author: 'Rafi Ahmed',
+    reading_time: '5 min read',
     excerpt: 'Creative and comfortable ways to house your pet rabbit.',
-    image_url:
-      'https://i.ibb.co/tPxLtBYd/Whats-App-Image-2025-07-14-at-20-27-59-28d3ee4d.jpg',
+    content:
+      'This post includes cage setup, enrichment ideas, bedding, and how to make your rabbit feel safe and happy.',
+    image_url: 'https://i.ibb.co/tPxLtBYd/rabbit.jpg',
     link: '/blog/17',
     category: 'Rabbit',
+    tags: ['Rabbit', 'Habitat', 'Care', 'Comfort'],
   },
   {
     id: 18,
     title: 'Choosing Colorful Fish',
     date: '2025-07-28',
+    author: 'Tanvir Alam',
+    reading_time: '4 min read',
     excerpt: 'Select the right colorful fish for your aquarium and care tips.',
-    image_url:
-      'https://i.ibb.co/60C54Bbd/Whats-App-Image-2025-07-14-at-20-27-35-19135d8b.jpg',
+    content:
+      'Covers fish species, tank compatibility, feeding, and water quality maintenance.',
+    image_url: 'https://i.ibb.co/60C54Bbd/fish.jpg',
     link: '/blog/18',
     category: 'Fish',
+    tags: ['Fish', 'Aquarium', 'Colorful', 'Care'],
   },
   {
     id: 19,
     title: 'Bird Cage Setup',
     date: '2025-07-27',
+    author: 'Nadia Hossain',
+    reading_time: '5 min read',
     excerpt: "How to properly set up your bird's cage for comfort and safety.",
-    image_url:
-      'https://i.ibb.co/VWN0bnc2/Whats-App-Image-2025-07-14-at-20-25-41-266a384e.jpg',
+    content:
+      'Learn cage size, placement, perches, toys, and hygiene tips for a healthy bird environment.',
+    image_url: 'https://i.ibb.co/VWN0bnc2/bird.jpg',
     link: '/blog/19',
     category: 'Bird',
+    tags: ['Bird', 'Cage', 'Setup', 'Care'],
   },
   {
     id: 20,
     title: 'Adopting a Dog Safely',
     date: '2025-07-26',
+    author: 'Imamul Molla',
+    reading_time: '5 min read',
     excerpt: 'Steps to safely adopt a dog and bring them home.',
-    image_url:
-      'https://i.ibb.co/8DM3PMKf/Whats-App-Image-2025-07-14-at-20-27-57-12d01b1d.jpg',
+    content:
+      'Covers choosing a shelter, health checks, home prep, and first days with your new dog.',
+    image_url: 'https://i.ibb.co/8DM3PMKf/dog.jpg',
     link: '/blog/20',
     category: 'Dog',
+    tags: ['Dog', 'Adoption', 'Safety', 'Tips'],
   },
   {
     id: 21,
     title: 'Cat Health Checklist',
     date: '2025-07-25',
+    author: 'Sarah Khan',
+    reading_time: '4 min read',
     excerpt: 'Ensure your cat stays healthy with this essential checklist.',
-    image_url:
-      'https://i.ibb.co/jkjt18ns/Whats-App-Image-2025-07-14-at-20-27-31-74e93d22.jpg',
+    content:
+      'Covers vaccinations, diet, grooming, dental care, and signs of illness to watch for.',
+    image_url: 'https://i.ibb.co/jkjt18ns/cat.jpg',
     link: '/blog/21',
     category: 'Cat',
+    tags: ['Cat', 'Health', 'Checklist', 'Care'],
   },
   {
     id: 22,
     title: 'Rabbit Grooming Tips',
     date: '2025-07-24',
+    author: 'Rafi Ahmed',
+    reading_time: '4 min read',
     excerpt: 'Simple grooming tips to keep your rabbit clean and happy.',
-    image_url:
-      'https://i.ibb.co/tPxLtBYd/Whats-App-Image-2025-07-14-at-20-27-59-28d3ee4d.jpg',
+    content:
+      'Covers brushing, nail trimming, ear cleaning, and hygiene practices for a healthy rabbit.',
+    image_url: 'https://i.ibb.co/tPxLtBYd/rabbit.jpg',
     link: '/blog/22',
     category: 'Rabbit',
+    tags: ['Rabbit', 'Grooming', 'Care', 'Health'],
   },
   {
     id: 23,
     title: 'Top 10 Fish Varieties',
     date: '2025-07-23',
+    author: 'Tanvir Alam',
+    reading_time: '5 min read',
     excerpt: 'Explore the most popular and easy-to-care-for fish varieties.',
-    image_url:
-      'https://i.ibb.co/60C54Bbd/Whats-App-Image-2025-07-14-at-20-27-35-19135d8b.jpg',
+    content:
+      'Learn about colorful, hardy, and beginner-friendly fish species and their care requirements.',
+    image_url: 'https://i.ibb.co/60C54Bbd/fish.jpg',
     link: '/blog/23',
     category: 'Fish',
+    tags: ['Fish', 'Top 10', 'Care', 'Varieties'],
   },
   {
     id: 24,
     title: 'Parrot Care Essentials',
     date: '2025-07-22',
+    author: 'Nadia Hossain',
+    reading_time: '5 min read',
     excerpt: 'Everything you need to know about taking care of your parrot.',
-    image_url:
-      'https://i.ibb.co/VWN0bnc2/Whats-App-Image-2025-07-14-at-20-25-41-266a384e.jpg',
+    content:
+      'Covers diet, housing, toys, training, and socialization for a happy parrot.',
+    image_url: 'https://i.ibb.co/VWN0bnc2/bird.jpg',
     link: '/blog/24',
     category: 'Bird',
+    tags: ['Parrot', 'Care', 'Health', 'Training'],
   },
   {
     id: 25,
     title: 'Dog Exercise Tips',
     date: '2025-07-21',
+    author: 'Imamul Molla',
+    reading_time: '4 min read',
     excerpt: 'Keep your dog healthy and active with these exercise tips.',
-    image_url:
-      'https://i.ibb.co/8DM3PMKf/Whats-App-Image-2025-07-14-at-20-27-57-12d01b1d.jpg',
+    content:
+      'Includes walks, games, training exercises, and mental stimulation for dogs of all ages.',
+    image_url: 'https://i.ibb.co/8DM3PMKf/dog.jpg',
     link: '/blog/25',
     category: 'Dog',
+    tags: ['Dog', 'Exercise', 'Health', 'Play'],
   },
   {
     id: 26,
     title: 'Cat Toys That Cats Love',
     date: '2025-07-20',
+    author: 'Sarah Khan',
+    reading_time: '4 min read',
     excerpt: 'Fun and engaging toys your cat will enjoy.',
-    image_url:
-      'https://i.ibb.co/jkjt18ns/Whats-App-Image-2025-07-14-at-20-27-31-74e93d22.jpg',
+    content:
+      'Learn about interactive toys, puzzle feeders, and DIY activities to keep your cat active.',
+    image_url: 'https://i.ibb.co/jkjt18ns/cat.jpg',
     link: '/blog/26',
     category: 'Cat',
+    tags: ['Cat', 'Toys', 'Play', 'Fun'],
   },
   {
     id: 27,
     title: 'Rabbit Exercise Ideas',
     date: '2025-07-19',
+    author: 'Rafi Ahmed',
+    reading_time: '5 min read',
     excerpt: 'Keep your rabbit active and playful with these tips.',
-    image_url:
-      'https://i.ibb.co/tPxLtBYd/Whats-App-Image-2025-07-14-at-20-27-59-28d3ee4d.jpg',
+    content:
+      'Covers free-roam play, tunnels, toys, and safe interaction for physical and mental stimulation.',
+    image_url: 'https://i.ibb.co/tPxLtBYd/rabbit.jpg',
     link: '/blog/27',
     category: 'Rabbit',
+    tags: ['Rabbit', 'Exercise', 'Play', 'Care'],
   },
   {
     id: 28,
     title: 'Setting Up a Community Fish Tank',
     date: '2025-07-18',
+    author: 'Tanvir Alam',
+    reading_time: '5 min read',
     excerpt: 'Ideas for creating a vibrant community aquarium.',
-    image_url:
-      'https://i.ibb.co/60C54Bbd/Whats-App-Image-2025-07-14-at-20-27-35-19135d8b.jpg',
+    content:
+      'Learn fish compatibility, tank size, decorations, filtration, and maintenance for a mixed fish tank.',
+    image_url: 'https://i.ibb.co/60C54Bbd/fish.jpg',
     link: '/blog/28',
     category: 'Fish',
+    tags: ['Fish', 'Community', 'Aquarium', 'Setup'],
   },
   {
     id: 29,
     title: 'Caring for Small Birds',
     date: '2025-07-17',
+    author: 'Nadia Hossain',
+    reading_time: '4 min read',
     excerpt:
       'Tips for taking care of small pet birds like finches and canaries.',
-    image_url:
-      'https://i.ibb.co/VWN0bnc2/Whats-App-Image-2025-07-14-at-20-25-41-266a384e.jpg',
+    content:
+      'Covers diet, cage setup, enrichment, socialization, and health monitoring.',
+    image_url: 'https://i.ibb.co/VWN0bnc2/bird.jpg',
     link: '/blog/29',
     category: 'Bird',
+    tags: ['Bird', 'Small Birds', 'Care', 'Health'],
   },
   {
     id: 30,
     title: 'Adopting Pets Responsibly',
     date: '2025-07-16',
+    author: 'Imamul Molla',
+    reading_time: '5 min read',
     excerpt:
       'Learn how to adopt pets responsibly and prepare your home for a new family member.',
-    image_url:
-      'https://i.ibb.co/8DM3PMKf/Whats-App-Image-2025-07-14-at-20-27-57-12d01b1d.jpg',
+    content:
+      'Covers selecting the right pet, home preparation, health checks, and providing a loving environment.',
+    image_url: 'https://i.ibb.co/zhMbvXRM/others.jpg',
     link: '/blog/30',
     category: 'Others',
+    tags: ['Adoption', 'Pet Care', 'Responsibility', 'Guide'],
   },
 ];

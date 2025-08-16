@@ -19,17 +19,44 @@ const BlogDetails = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-4">
+      {/* Title */}
       <h2 className="text-3xl font-bold mb-4">{post.title}</h2>
 
+      {/* Image */}
       <img
         src={post.image_url}
         alt={post.title}
         className="w-full h-64 object-cover rounded mb-4"
       />
-      <p className="mb-4">{post.date}</p>
+
+      {/* Details */}
+      <div className="mb-4 text-gray-600">
+        <p>
+          By <strong>{post.author}</strong>
+        </p>
+        <p>Date: {post.date}</p>
+        <p>Reading Time: {post.reading_time}</p>
+        <p>Category: {post.category}</p>
+        {post.tags && post.tags.length > 0 && (
+          <p>
+            Tags:{' '}
+            {post.tags.map((tag, index) => (
+              <span
+                key={index}
+                className="inline-block bg-gray-200 rounded px-2 py-1 mr-2"
+              >
+                {tag}
+              </span>
+            ))}
+          </p>
+        )}
+      </div>
+
+      {/* Excerpt and Content */}
       <p className="mb-4">{post.excerpt}</p>
-      <p>{post.content || 'Full blog content goes here...'}</p>
-      <Link to="/blogs" className="underline mt-4 block">
+      <p className="mb-4">{post.content || 'Full blog content goes here...'}</p>
+
+      <Link to="/blogs" className="underline mt-6 block">
         Back to Blogs
       </Link>
     </div>
