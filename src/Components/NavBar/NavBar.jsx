@@ -7,110 +7,20 @@ import Logo from '../Logo/Logo';
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
-
-  const handleToggle = e => {
-    setTheme(e.target.checked ? 'dark' : 'light');
-  };
 
   useEffect(() => {
     localStorage.setItem('theme', theme);
     document.querySelector('html').setAttribute('data-theme', theme);
   }, [theme]);
 
-  const navigate = useNavigate();
-
-  const accentOrange = '#F97316'; // Accent Orange color
-
-  const links = (
-    <>
-      <li className="px-2">
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            `transition-colors duration-300 font-semibold rounded-2xl px-2 py-1
-            ${
-              isActive
-                ? 'text-orange-500 border border-orange-500'
-                : ' hover:text-orange-500 hover:border hover:border-orange-500'
-            }`
-          }
-        >
-          Home
-        </NavLink>
-      </li>
-      <li className="px-2">
-        <NavLink
-          to="/petListing"
-          className={({ isActive }) =>
-            ` duration-300 font-semibold rounded-2xl px-2 py-1
-            ${
-              isActive
-                ? 'text-orange-500 border border-orange-500'
-                : ' hover:text-orange-500 hover:border hover:border-orange-500'
-            }`
-          }
-        >
-          Pet Listing
-        </NavLink>
-      </li>
-      <li className="px-2">
-        <NavLink
-          to="/donationCampaigns"
-          className={({ isActive }) =>
-            ` duration-300 font-semibold rounded-2xl px-2 py-1
-            ${
-              isActive
-                ? 'text-orange-500 border border-orange-500'
-                : ' hover:text-orange-500 hover:border hover:border-orange-500'
-            }`
-          }
-        >
-          Donation Campaigns
-        </NavLink>
-      </li>
-      {user && (
-        <li className="px-2">
-          <NavLink
-            to="/blogs"
-            className={({ isActive }) =>
-              ` duration-300 font-semibold rounded-2xl px-2 py-1
-            ${
-              isActive
-                ? 'text-orange-500 border border-orange-500'
-                : ' hover:text-orange-500 hover:border hover:border-orange-500'
-            }`
-            }
-          >
-            Blogs
-          </NavLink>
-        </li>
-      )}
-      {user && (
-        <li className="px-2">
-          <NavLink
-            to="/blog"
-            className={({ isActive }) =>
-              ` duration-300 font-semibold rounded-2xl px-2 py-1
-            ${
-              isActive
-                ? 'text-orange-500 border border-orange-500'
-                : ' hover:text-orange-500 hover:border hover:border-orange-500'
-            }`
-            }
-          >
-            Blog
-          </NavLink>
-        </li>
-      )}
-    </>
-  );
+  const handleToggle = e => setTheme(e.target.checked ? 'dark' : 'light');
 
   const handleSignOut = async () => {
     try {
       await logOut();
-
       Swal.fire({
         icon: 'success',
         title: 'Logout successful!',
@@ -120,22 +30,60 @@ const NavBar = () => {
         timer: 1500,
         timerProgressBar: true,
       });
-
-      setTimeout(() => {
-        navigate('/login');
-      }, 1600);
+      setTimeout(() => navigate('/login'), 1600);
     } catch (error) {
-      console.error('Logout error:', error);
-      Swal.fire({
-        icon: 'error',
-        title: 'Logout failed',
-        text: error.message,
-      });
+      Swal.fire({ icon: 'error', title: 'Logout failed', text: error.message });
     }
   };
 
+  const links = (
+    <>
+      {['Home', 'Pet Listing', 'Donation Campaigns'].map((text, idx) => {
+        const path =
+          text === 'Home'
+            ? '/'
+            : text === 'Pet Listing'
+            ? '/petListing'
+            : '/donationCampaigns';
+        return (
+          <li key={idx} className="px-2">
+            <NavLink
+              to={path}
+              className={({ isActive }) =>
+                `font-semibold rounded-2xl px-2 py-1 transition-colors duration-300 ${
+                  isActive
+                    ? 'text-orange-500 border border-orange-500'
+                    : 'text-orange-500 hover:border hover:border-orange-500 hover:bg-orange-50'
+                }`
+              }
+            >
+              {text}
+            </NavLink>
+          </li>
+        );
+      })}
+
+      {user && (
+        <li className="px-2">
+          <NavLink
+            to="/blogs"
+            className={({ isActive }) =>
+              `font-semibold rounded-2xl px-2 py-1 transition-colors duration-300 ${
+                isActive
+                  ? 'text-orange-500 border border-orange-500'
+                  : 'text-orange-500 hover:border hover:border-orange-500 hover:bg-orange-50'
+              }`
+            }
+          >
+            Blogs
+          </NavLink>
+        </li>
+      )}
+    </>
+  );
+
   return (
-    <div className="shadow-sm z-40 shadow-orange-300 sticky top-0 bg-white">
+    <div className="shadow-sm sticky top-0 bg-white z-40 shadow-orange-300">
       <Container>
         <div className="navbar">
           <div className="navbar-start">
@@ -144,11 +92,10 @@ const NavBar = () => {
                 tabIndex={0}
                 role="button"
                 className="btn btn-ghost lg:hidden"
-                aria-label="Toggle menu"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 "
+                  className="h-5 w-5 text-orange-500"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -163,7 +110,7 @@ const NavBar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow space-y-3"
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow space-y-3 text-orange-500"
               >
                 {links}
               </ul>
@@ -172,7 +119,9 @@ const NavBar = () => {
           </div>
 
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">{links}</ul>
+            <ul className="menu menu-horizontal px-1 text-orange-500">
+              {links}
+            </ul>
           </div>
 
           <div className="navbar-end flex items-center space-x-3">
@@ -181,33 +130,21 @@ const NavBar = () => {
                 <div
                   tabIndex={0}
                   role="button"
-                  className="btn btn-ghost btn-circle avatar transition duration-300 hover:ring-2 hover:ring-orange-400"
-                  aria-label="User menu"
+                  className="btn btn-ghost btn-circle avatar hover:ring-2 hover:ring-orange-400 transition"
                 >
                   <div className="w-10 rounded-full border border-orange-500 flex items-center overflow-hidden">
-                    {user.photoURL ? (
-                      <img
-                        alt="User Avatar"
-                        src={user.photoURL}
-                        className="object-cover w-full h-full"
-                      />
-                    ) : (
-                      <img
-                        alt="Placeholder Avatar"
-                        src="https://via.placeholder.com/150"
-                        className="object-cover w-full h-full"
-                      />
-                    )}
+                    <img
+                      alt="Avatar"
+                      src={user.photoURL || 'https://via.placeholder.com/150'}
+                      className="object-cover w-full h-full"
+                    />
                   </div>
                 </div>
-                <ul
-                  tabIndex={0}
-                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
-                >
-                  <li className="">
+                <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow text-orange-500">
+                  <li>
                     <NavLink
                       to="/dashboard"
-                      className="w-full text-left px-4 py-2 rounded transition-colors duration-300 font-semibold border border-orange-500 hover:bg-orange-500 hover:text-white"
+                      className="w-full text-left px-4 py-2 rounded font-semibold border border-orange-500 hover:bg-orange-500 hover:text-white transition"
                     >
                       Dashboard
                     </NavLink>
@@ -215,7 +152,7 @@ const NavBar = () => {
                   <li className="mt-3">
                     <button
                       onClick={handleSignOut}
-                      className="w-full text-left px-4 py-2 rounded transition-colors duration-300 font-semibold border border-orange-500 hover:bg-orange-500 hover:text-white"
+                      className="w-full text-left px-4 py-2 rounded font-semibold border border-orange-500 hover:bg-orange-500 hover:text-white transition"
                     >
                       Log Out
                     </button>
@@ -225,7 +162,7 @@ const NavBar = () => {
             ) : (
               <Link
                 to="/login"
-                className="px-5 py-2 rounded-2xl border font-bold transition-colors duration-300 border-orange-500 text-orange-500 hover:bg-orange-200"
+                className="px-5 py-2 rounded-2xl border border-orange-500 text-orange-500 font-bold hover:bg-orange-200 transition"
               >
                 Login
               </Link>
@@ -233,7 +170,7 @@ const NavBar = () => {
 
             <div className="hidden lg:block md:hidden">
               {user?.displayName && (
-                <span className="text-sm font-semibold ">
+                <span className="text-sm font-semibold text-orange-500">
                   {user.displayName}
                 </span>
               )}
@@ -246,9 +183,7 @@ const NavBar = () => {
                   type="checkbox"
                   onChange={handleToggle}
                   checked={theme === 'dark'}
-                  aria-label="Toggle theme"
                 />
-
                 {/* Sun icon */}
                 <svg
                   className="swap-on h-6 w-6 fill-current text-orange-500"
@@ -257,7 +192,6 @@ const NavBar = () => {
                 >
                   <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
                 </svg>
-
                 {/* Moon icon */}
                 <svg
                   className="swap-off h-6 w-6 fill-current text-orange-500"

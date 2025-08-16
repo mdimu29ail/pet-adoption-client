@@ -28,7 +28,8 @@ import PaymentHistory from '../Pages/Payment/PaymentHistory';
 import TotalDonationsAdmin from '../PrivateRouter/Admin/TotalDonationsAdmin';
 import MyDonationCampaigns from '../Pages/DonationCampaigns/MyDonationCampaigns';
 import DashboardHome from '../Pages/HomeDashboard/HomeDashboard';
-import Blog from '../Components/Blog/Blog';
+import Blogs from '../Components/Blog/Blogs';
+import BlogDetails from '../Components/Blog/BlogDetails';
 
 const router = createBrowserRouter([
   {
@@ -51,18 +52,27 @@ const router = createBrowserRouter([
         path: 'blogs',
         element: (
           <PrivateRoute>
-            <Blog></Blog>
+            <Blogs></Blogs>
           </PrivateRoute>
         ),
       },
       {
-        path: 'blog',
+        path: 'blog/:id',
         element: (
           <PrivateRoute>
-            <Blog></Blog>
+            <BlogDetails></BlogDetails>
           </PrivateRoute>
         ),
       },
+
+      // {
+      //   path: 'blog',
+      //   element: (
+      //     <PrivateRoute>
+      //       <Blog></Blog>
+      //     </PrivateRoute>
+      //   ),
+      // },
 
       {
         path: '/donations/:id',
