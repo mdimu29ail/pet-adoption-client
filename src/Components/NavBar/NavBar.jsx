@@ -70,6 +70,40 @@ const NavBar = () => {
           Donation Campaigns
         </NavLink>
       </li>
+      {user && (
+        <li className="px-2">
+          <NavLink
+            to="/blogs"
+            className={({ isActive }) =>
+              ` duration-300 font-semibold rounded-2xl px-2 py-1
+            ${
+              isActive
+                ? 'text-orange-500 border border-orange-500'
+                : ' hover:text-orange-500 hover:border hover:border-orange-500'
+            }`
+            }
+          >
+            Blogs
+          </NavLink>
+        </li>
+      )}
+      {user && (
+        <li className="px-2">
+          <NavLink
+            to="/blog"
+            className={({ isActive }) =>
+              ` duration-300 font-semibold rounded-2xl px-2 py-1
+            ${
+              isActive
+                ? 'text-orange-500 border border-orange-500'
+                : ' hover:text-orange-500 hover:border hover:border-orange-500'
+            }`
+            }
+          >
+            Blog
+          </NavLink>
+        </li>
+      )}
     </>
   );
 
@@ -101,7 +135,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="shadow-sm z-40 shadow-orange-300 sticky top-0 bg-amber-200">
+    <div className="shadow-sm z-40 shadow-orange-300 sticky top-0 bg-white">
       <Container>
         <div className="navbar">
           <div className="navbar-start">

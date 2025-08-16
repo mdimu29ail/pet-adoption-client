@@ -7,7 +7,7 @@ const FormInput = ({
   isTextArea = false,
 }) => {
   const inputClasses =
-    'w-full bg-transparent border-b-2 border-neutral-400 focus:border-black dark:border-white/50 dark:focus:border-white placeholder-neutral-600 dark:placeholder-white/80 text-black dark:text-white outline-none py-2 transition-colors duration-300';
+    'w-full border-b-2 border-neutral-400 focus:border-black placeholder-neutral-600 outline-none py-2 duration-300';
 
   return isTextArea ? (
     <textarea
