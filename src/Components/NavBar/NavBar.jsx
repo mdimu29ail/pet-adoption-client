@@ -79,6 +79,22 @@ const NavBar = () => {
           </NavLink>
         </li>
       )}
+      {user && (
+        <li className="px-2">
+          <NavLink
+            to="/events"
+            className={({ isActive }) =>
+              `font-semibold rounded-2xl px-2 py-1 transition-colors duration-300 ${
+                isActive
+                  ? 'text-orange-500 border border-orange-500'
+                  : 'text-orange-500 hover:border hover:border-orange-500 hover:bg-orange-50'
+              }`
+            }
+          >
+            Events
+          </NavLink>
+        </li>
+      )}
     </>
   );
 

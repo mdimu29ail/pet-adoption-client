@@ -30,7 +30,7 @@ const BlogDetails = () => {
       />
 
       {/* Details */}
-      <div className="mb-4 text-gray-600">
+      <div className="mb-4">
         <p>
           By <strong>{post.author}</strong>
         </p>
@@ -43,7 +43,7 @@ const BlogDetails = () => {
             {post.tags.map((tag, index) => (
               <span
                 key={index}
-                className="inline-block bg-gray-200 rounded px-2 py-1 mr-2"
+                className="inline-block rounded px-2 py-1 mr-2 bg-amber-600"
               >
                 {tag}
               </span>

@@ -30,6 +30,7 @@ import MyDonationCampaigns from '../Pages/DonationCampaigns/MyDonationCampaigns'
 import DashboardHome from '../Pages/HomeDashboard/HomeDashboard';
 import Blogs from '../Components/Blog/Blogs';
 import BlogDetails from '../Components/Blog/BlogDetails';
+import Events from '../Components/Events/Events';
 
 const router = createBrowserRouter([
   {
@@ -65,14 +66,14 @@ const router = createBrowserRouter([
         ),
       },
 
-      // {
-      //   path: 'blog',
-      //   element: (
-      //     <PrivateRoute>
-      //       <Blog></Blog>
-      //     </PrivateRoute>
-      //   ),
-      // },
+      {
+        path: '/events',
+        element: (
+          <PrivateRoute>
+            <Events></Events>
+          </PrivateRoute>
+        ),
+      },
 
       {
         path: '/donations/:id',
