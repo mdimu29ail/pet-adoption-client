@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import PetCategories from './PetCategories';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
-import Loading from '../../Loading/Loading';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 const PetList = () => {
   const [category, setCategory] = useState('All');
@@ -33,10 +34,6 @@ const PetList = () => {
 
   const petsToShow = showAll ? filteredPets : filteredPets.slice(0, 6);
 
-  if (loading) {
-    return <Loading></Loading>;
-  }
-
   return (
     <div>
       <PetCategories
@@ -48,38 +45,56 @@ const PetList = () => {
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto p-4">
-        {petsToShow.map(pet => (
-          <div key={pet._id || pet.id} className="border rounded p-4 shadow">
-            <img
-              src={pet.image_url}
-              alt={pet.name}
-              className="h-40 w-full object-cover rounded"
-            />
-            <h3 className="text-lg font-bold mt-2">{pet.name}</h3>
-            <div className="flex justify-between">
-              <p className="text-xl ">{pet.breed}</p>
-              <p className="text-sm  bg-green-500 px-2 py-1 rounded-full">
-                {pet.status}
-              </p>
-            </div>
+        {loading
+          ? Array.from({ length: 6 }).map((_, idx) => (
+              <div
+                key={idx}
+                className="border rounded p-4 shadow animate-pulse"
+              >
+                <Skeleton height={160} />
+                <Skeleton className="mt-2" height={20} width={`80%`} />
+                <div className="flex justify-between mt-2">
+                  <Skeleton height={20} width={`60%`} />
+                  <Skeleton height={20} width={50} />
+                </div>
+                <Skeleton className="mt-3" height={35} />
+              </div>
+            ))
+          : petsToShow.map(pet => (
+              <div
+                key={pet._id || pet.id}
+                className="border rounded p-4 shadow"
+              >
+                <img
+                  src={pet.image_url}
+                  alt={pet.name}
+                  className="h-40 w-full object-cover rounded"
+                />
+                <h3 className="text-lg font-bold mt-2">{pet.name}</h3>
+                <div className="flex justify-between">
+                  <p className="text-xl ">{pet.breed}</p>
+                  <p className="text-sm bg-green-500 px-2 py-1 rounded-full">
+                    {pet.status}
+                  </p>
+                </div>
 
-            <button
-              onClick={() => handleViewDetails(pet._id || pet.id)}
-              className="mt-3 bg-orange-500 hover:bg-orange-600  px-4 py-2 rounded w-full"
-            >
-              Details
-            </button>
-          </div>
-        ))}
+                <button
+                  onClick={() => handleViewDetails(pet._id || pet.id)}
+                  className="mt-3 bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded w-full"
+                >
+                  Details
+                </button>
+              </div>
+            ))}
 
-        {petsToShow.length === 0 && (
+        {!loading && petsToShow.length === 0 && (
           <p className="text-center text-gray-500 col-span-full">
             No pets found in this category.
           </p>
         )}
       </div>
 
-      {filteredPets.length > 6 && (
+      {!loading && filteredPets.length > 6 && (
         <div className="text-center my-4">
           <button
             onClick={() => setShowAll(!showAll)}
